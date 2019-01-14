@@ -10,12 +10,28 @@ exports.landingPage = function(req,res) {
 //     challenge : req.body.challenge
 //    }));
 
-const token = process.env.SLACK_BOT_TOKEN
-const Slack = require('slack')
-const bot = new Slack({token})
+
+const { RTMClient } = require('@slack/client');
+
+// An access token (from your Slack app or custom integration - usually xoxb)
+const token = process.env.SLACK_TOKEN;
+
+// The client is initialized and then started to get an active connection to the platform
+const rtm = new RTMClient(token);
+rtm.start();
  
-// logs {args:{hyper:'card'}}
-bot.api.test({hyper:'card'}).then(console.log)
+rtm.on('message', (message) => {
+    // For structure of `message`, see https://api.slack.com/events/message
+  
+    // Skip messages that are from a bot or my own user ID
+    if ( (message.subtype && message.subtype === 'bot_message') ||
+         (!message.subtype && message.user === rtm.activeUserId) ) {
+      return;
+    }
+  
+    // Log the message
+    console.log(`(channel:${message.channel}) ${message.user} says: ${message.text}`);
+  });
 
 };
 
