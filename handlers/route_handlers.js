@@ -15,7 +15,7 @@ exports.landingPage = function(req,res) {
 exports.home = (req,res) => {
     console.log('I am on home page');
 
-    var userName = req.body.user_name;
+    var userName = req.body.ts;
     var botPayload = {
       text : 'Hello ' + userName + ', Welcome to Abode ! I\'ll be your guide.'
     };
