@@ -20,11 +20,8 @@ exports.home = (req,res) => {
       text : 'Hello ' + userName + ', Welcome to Abode ! I\'ll be your guide.'
     };
     // Loop otherwise..
-    if (userName !== 'slackbot') {
-      return res.status(200).json(botPayload);
-    } else {
-      return res.status(200).end();
-    }
+    res.status(200).json(botPayload);
+   
 
     
 };
