@@ -15,5 +15,5 @@ app.use('/',routers);
 
 
 app.listen(PORT, function() {
-    console.log("App is running on port " + PORT);
+    console.log("App is runnin on port " + PORT);
 });
