@@ -14,7 +14,7 @@ exports.landingPage = function(req,res) {
 const { RTMClient } = require('@slack/client');
 
 // An access token (from your Slack app or custom integration - usually xoxb)
-const token = process.env.SLACK_TOKEN;
+const token = 'xoxp-289559311893-471620757398-524233620550-79d8f700b34b78a6901e9a203553fb96';
 
 // The client is initialized and then started to get an active connection to the platform
 const rtm = new RTMClient(token);
