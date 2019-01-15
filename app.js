@@ -3,8 +3,8 @@ const axios = require('axios');
 
 
 const bot = new SlackBot({
- token: 'xoxb-289559311893-523770865618-7ceNG7Y4a7W5Yv4BigSlMtTU',
- name: 'testbot-siki'
+ token: 'xoxb-520780954817-520787491121-94Uoyiy1ocbX12ex3J36Kcsu',
+ name: 'abode_bot'
 });
 
 // Start Handler
@@ -103,7 +103,7 @@ function runHelp() {
 
 function thread_msg(thread_ts, channel, bot_name) {
  var api= 'https://slack.com/api/chat.postMessage?';
- var token= 'token=xoxp-289559311893-471620757398-523603746356-3f61d4ac6adf214750254c65dbd5de37&';
+ var token= 'token=xoxp-520780954817-522787814374-522833543430-731bd7ec3cad5b06695dd241f9728899&';
  var channel_id='channel=' + channel + '&';
  var thread_tss = 'thread_ts=' + thread_ts + '&';
  var text='text=Hi,This%20is%20a%20thread%20msg&';
