@@ -18,7 +18,7 @@ exports.landingPagePost = function (req, res) {
 
   //console.log(req.body.challenge);
   res.setHeader('Content-Type', 'application/json');
-  console.log(req.query);
+  console.log(req.body);
   res.send(JSON.stringify("hello"));
 
 
