@@ -17,11 +17,11 @@ exports.landingPagePost = function (req, res) {
   console.log('I am on landing page');
 
   //console.log(req.body.challenge);
-  res.setHeader('Content-Type', 'application/json');
+  //res.setHeader('Content-Type', 'application/json');
   //console.log(req.params.Message);
-  console.log(req.body.Message);
+  console.log(req.body);
   //console.log(req.query);
-  res.send(JSON.stringify("hello"));
+  //res.send(JSON.stringify("hello"));
 
 
 
