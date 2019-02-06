@@ -6,6 +6,18 @@ exports.landingPage = function (req, res) {
 
   //console.log(req.body.challenge);
   res.setHeader('Content-Type', 'application/json');
+  //console.log(req);
+  res.send(JSON.stringify("hello"));
+
+
+
+};
+
+exports.landingPagePost = function (req, res) {
+  console.log('I am on landing page');
+
+  //console.log(req.body.challenge);
+  res.setHeader('Content-Type', 'application/json');
   console.log(req);
   res.send(JSON.stringify("hello"));
 
