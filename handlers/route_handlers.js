@@ -1,5 +1,5 @@
 var express = require('express');
-
+var xml = require('xml');
 
 exports.landingPage = function (req, res) {
   console.log('I am on landing page');
@@ -21,7 +21,10 @@ exports.landingPagePost = function (req, res) {
   //console.log(req.params.Message);
   console.log(req.body);
   //console.log(req.query);
-  res.send(JSON.stringify("Message sent"));
+
+  res.set('Content-Type', 'text/xml');
+  res.send(xml("Message sent"));
+  //res.send();
 
 
 
