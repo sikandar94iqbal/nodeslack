@@ -21,7 +21,7 @@ exports.landingPagePost = function (req, res) {
   //console.log(req.params.Message);
   console.log(req.body);
   //console.log(req.query);
-  //res.send(JSON.stringify("hello"));
+  res.send(JSON.stringify("Message sent"));
 
 
 
