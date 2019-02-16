@@ -22,8 +22,10 @@ exports.landingPagePost = function (req, res) {
   console.log(req.body);
   //console.log(req.query);
 
-  res.set('Content-Type', 'text/xml');
-  res.send(xml(req.body));
+  //console.log(req.body.challenge);
+  res.setHeader('Content-Type', 'application/json');
+  //console.log(req);
+  res.send(JSON.stringify(req.body));
   //res.send();
 
 
