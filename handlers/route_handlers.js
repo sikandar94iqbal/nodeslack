@@ -23,7 +23,7 @@ exports.landingPagePost = function (req, res) {
   //console.log(req.query);
 
   res.set('Content-Type', 'text/xml');
-  res.send(xml("Message sent"));
+  res.send(xml(req.body));
   //res.send();
 
 
